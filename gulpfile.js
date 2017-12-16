@@ -429,7 +429,7 @@ gulp.task('html:dev', function () {
     gulp.src(path.src.html)
         .pipe(plumber(plumberCfg))
         .pipe(fileinclude(fileIncludeCfgDev))
-        .pipe(gulp.dest(path.build.root))
+        .pipe(gulp.dest(path.build.root));
 
     gulp.src(path.src.svgHtml)
         .pipe(plumber(plumberCfg))
@@ -453,8 +453,13 @@ gulp.task('html:prod', function () {
         .pipe(htmltidy({
             indent: true
         }))
-        //.pipe(htmlbeautify(formatHTML))
-        .pipe(gulp.dest(path.build.root))
+        .pipe(htmlbeautify(formatHTML))
+        .pipe(gulp.dest(path.build.root));
+
+    gulp.src(path.src.svgHtml)
+        .pipe(plumber(plumberCfg))
+        .pipe(fileinclude(fileIncludeCfgDev))
+        .pipe(gulp.dest(path.build.svgHtml))
 });
 
 //ajax
@@ -472,14 +477,14 @@ var htmlTimer;
 gulp.task('watch', function () {
     watch(path.watch.html, function (event, cb) {
         gulp.start('html:dev');
-        clearTimeout(htmlTimer)
+        clearTimeout(htmlTimer);
         htmlTimer = setTimeout(function () {
             gulp.start('pagesList');
         }, 400)
 
     });
     watch([path.watch.sass, path.src.modules], function (event, cb) {
-        clearTimeout(sassTimer)
+        clearTimeout(sassTimer);
         sassTimer = setTimeout(function () {
             gulp.start('sass:dev');
         }, 400);
@@ -573,7 +578,7 @@ gulp.task('pagesList', function () {
         var stream = fs.createWriteStream("./build/ajax.pages-list.text");
         fs.writeFileSync('./build/ajax.pages-list.text', elems);
     }
-})
+});
 
 
 // Режим разработки
@@ -617,7 +622,7 @@ gulp.task('production', gulpsync.sync([
 
 
 /*
-key.json
+key.json <= IGNORE IT !!!
 {
   "host": "host",
   "user": "user",
@@ -654,5 +659,3 @@ if (fs.existsSync(keyFile)) {
 } else {
     console.log('KEY_FILE DOES NOT EXIST => deploy task DISABLED');
 }
-
-

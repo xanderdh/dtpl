@@ -1,34 +1,51 @@
-button,
-	.btn {
-		text-align: center;
-		vertical-align: top;
-		font-weight: $mainFontWeight;
-		font-size: $mainFontSize;
-		line-height: $mainFontHeight;
-		padding: 7px 20px;
-		text-transform: uppercase;
-		background: #e22b37;
-		color: #fff;
-		border: 0;
-		border-radius: 0; 
-		position: relative;
-		transition: all .3s ease-in-out;
-		width: 100%;
-		display: block;
-		&:hover,
-		&.active {
-			color: #fff;
-			background: #af0c17;
-		}
-		&:focus {
-			position: relative;
-			top: 1px;
-		}
-		&.disabled,
-		&[disabled="disabled"], 
-		&[disabled] {
-			background: #ccc;
-			color: #aaa;
-			cursor: not-allowed;
-		}
-	}
+.btn {
+  cursor: pointer;
+  text-align: center;
+  vertical-align: top;
+  font-weight: $button-font-weight;
+  font-size: map_get($button-font-size, default);
+  line-height: 1;
+  padding: map-get($button-padding, default);
+  text-transform: uppercase;
+  background: $button-background;
+  color: $button-color;
+  border: $button-border;
+  border-radius: $button-radius;
+  position: relative;
+  transition: all .3s ease-in-out;
+  width: 100%;
+  display: block;
+  margin: $button-margin;
+
+  &--tiny {
+    font-size: map_get($button-font-size, tiny);
+    padding: map-get($button-padding, tiny);
+  }
+  &--small {
+    font-size: map_get($button-font-size, small);
+    padding: map-get($button-padding, small);
+  }
+  &--large {
+    font-size: map_get($button-font-size, large);
+    padding: map-get($button-padding, large);
+  }
+
+  &:hover,
+  &.active {
+    color: $button-color-hover;
+    background: $button-background-hover;
+    border: $button-border-hover;
+  }
+  &:focus {
+    //position: relative;
+    //top: 1px;
+  }
+  &.disabled,
+  &[disabled="disabled"],
+  &[disabled] {
+    background: #ccc;
+    color: #aaa;
+    cursor: not-allowed;
+    border-color: #ccc;
+  }
+}

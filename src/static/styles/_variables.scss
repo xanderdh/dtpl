@@ -1,30 +1,78 @@
-//----------------------------------------------------//
-// Variables                                          //
-//----------------------------------------------------//
-$mainFont:				'PT Sans'; 
-$mainFontSize:		18px;
-$mainFontHeight:	24px;
-$mainFontWeight:	400;
-$mainFontColor:		#000;
+//  Table of Contents:
+//
+//   1. Global
+//   2. Colors
+//   3. Fonts
+//   4. Button
+//   5. Typography
 
-$secondFont:				'Verdana'; 
-$secondFontSize:		14px;
-$secondFontHeight:	22px;
-$secondFontWeign:		400;
-$secondFontColor:		#525252;
+//----------------------------------------------------//
+// 1. Global                                          //
+//----------------------------------------------------//
+$global-transition: all .3s ease-in-out;
+$global-radius: 5px;
+$global-rounded: 30px;
+$global-padding: 16px;
+$global-margin: 16px;
 
-$fixFont:					Verdana; 
-$fixFontSize:			14px;
-$fixFontHeight:		24px;
+//----------------------------------------------------//
+// 2. Colors                                          //
+//----------------------------------------------------//
+$default: #000;
+$main: #0c0;
+$black: #000;
+$white: #fff;
+$medium-gray: #ccc;
+
+//----------------------------------------------------//
+// 3. Fonts                                           //
+//----------------------------------------------------//
+$mainFont: 'PT Sans';
+$mainFontSize: 18px;
+$mainFontHeight: 1;
+$mainFontWeight: 400;
+$mainFontColor: $default;
+
+$fixFont: Verdana;
+$fixFontSize: 14px;
+$fixFontHeight: 24px;
 
 $font: 'Arial';
 
-// Variables => Colors
 //----------------------------------------------------//
-$default: #56606b;
+// 4. Buttons                                         //
+//----------------------------------------------------//
 
-$main: red;
+$button-padding: (
+        default: 10px 10px 10px 10px,
+        tiny: 4px 8px 4px 8px,
+        small: 5px 10px 5px 10px,
+        large: 10px 20px 10px 20px,
+);
+$button-font-size: (
+        default: 16px,
+        tiny: 12px,
+        small: 14px,
+        large: 20px,
+);
+$button-color: $black;
+$button-font-weight: 400;
+$button-margin: 0 0 0 0;
+$button-background: $main;
+$button-border: 2px solid $button-background;
+$button-radius: $global-radius;
+$button-rounded: $global-rounded;
 
-$black: #000;
-$white: #fff;
+$button-color-hover: $main;
+$button-background-hover: $white;
+$button-border-hover: 2px solid $main;
 
+//----------------------------------------------------//
+// 5. Typography                                      //
+//----------------------------------------------------//
+$h1-font-size: 32px;
+$h2-font-size: 30px;
+$h3-font-size: 28px;
+$h4-font-size: 24px;
+$h5-font-size: 20px;
+$h6-font-size: 18px;
