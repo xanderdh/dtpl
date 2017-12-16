@@ -1,0 +1,111 @@
+@@include('src/modules/head/head.html',
+  {"title": "template"}) 
+
+  @@include('src/modules/header/header.html')
+    
+<!-- btns all -->
+    <main class="content main-page">	
+		<style>
+			.temprow{padding-bottom: 20px;}
+		</style>
+		    
+		<div class="static-content">
+			<h1>Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
+			<h2>Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+			<h3>Lorem ipsum dolor sit amet, consectetur adipisicing.</h3>
+			<h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+			<h5>Lorem ipsum dolor sit amet, consectetur adipisicing.</h5>
+			<h6>Lorem ipsum dolor sit amet, consectetur adipisicing.</h6>
+			<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing.</blockquote>
+			<q>Lorem ipsum dolor sit amet, consectetur adipisicing.Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing.</q>
+			<hr>
+			<p>Lorem <a href="#">ipsum dolor</a> sit amet, <strong>consectetur adipisicing</strong>. Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing.Lorem ipsum dolor sit amet, consectetur adipisicing.Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing.Lorem <b>ipsum dolor sit amet</b>, consectetur adipisicing.Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+			<ol>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing. Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+			</ol>
+			<ul>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+			</ul>
+			<table>
+				<thead>
+					<tr>
+						<th>Модель
+							</th><th>Catalyst 4510R
+								</th><th>Catalyst 4507R
+									</th><th>Catalyst 4510R
+					</th></tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Количество слотов</td>
+						<td>10</td>
+						<td>8</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td>Слоты для процессорных модулей</td>
+						<td>3</td>
+						<td>1</td>
+						<td>3</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="temprow">
+			<button class="btn">Sumbit</button>
+			<a href="#" class="btn">OK</a>
+		</div>
+		<div class="temprow">
+			<input name="input" type="text" placeholder="Name">
+		</div>
+		<div class="temprow">
+			<textarea name="message" placeholder="Message"></textarea>
+		</div>
+		<div class="temprow">
+			<span class="default-select">
+				<select name="Select" id="">
+					<option value="">One</option>
+					<option value="">Two</option>
+					<option value="">Three</option>
+				</select>
+			</span>
+		</div>
+		<div class="temprow">
+			<input type="checkbox" name="check" id="check"> <label for="check">Option 1</label>
+			<input type="radio" name="radio" id="radio">
+			<label for="radio">Option 2</label>
+			<input type="radio" id="radio2" disabled="disabled" name="radio">
+			<label for="radio2">Option 3</label>
+			<input type="radio" name="radio" id="radio3">
+			<label for="radio3">Option 4</label>
+		</div>
+	</main><!-- MAIN CONTENT [END] -->
+
+<!-- btns all end -->
+
+  @@include('src/modules/footer/footer.html')
+
+	<div class="spinner basket-item__spinner js-spinner" data-min="1" data-max="30">
+		<a href="#" title="" class="spinner__minus js-spinner-minus">
+			<svg class="icon-minus">
+				<use xlink:href="#minus"></use>
+			</svg>
+		</a>
+		<input type="text" class="spinner__text">
+		<a href="#" title="" class="spinner__plus js-spinner-plus">
+			<svg class="icon-plus">
+				<use xlink:href="#plus"></use>
+			</svg>
+		</a>
+	</div>
+
+@@include('src/modules/foot/foot.html')

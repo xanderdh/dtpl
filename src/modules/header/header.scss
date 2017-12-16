@@ -1,0 +1,17 @@
+.header {
+	padding: 0 0 0 250px;
+	@include clearfix;
+	&__logo {
+		float: left;
+		margin: 0 0 0 -250px;
+		width: 200px;
+		@include b(mobile) {
+			
+		}
+	}
+	&__nav {
+		float: left;
+		width: 100%;
+	}
+}
+

@@ -1,0 +1,35 @@
+input[type="checkbox"] {
+	position: absolute;
+	left: -9999px;
+	& + label {
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 0 0 30px;
+		position: relative;
+		cursor: pointer;
+		font-size: 15px;
+		line-height: 24px;
+		width: auto !important;
+		&:before, &:after  {
+			position: absolute;
+			content: '';
+		}
+	}
+	&:not(:checked) + label {
+		&:before {
+		}
+	}
+	&:checked + label {
+		&:after {
+			opacity: 1;
+		}
+	}
+	&:disabled:checked + label {
+		&:before {
+		}
+	}
+	&:disabled:not(:checked) + label {
+		&:before {
+		}
+	}
+}
