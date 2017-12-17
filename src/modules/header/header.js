@@ -1,5 +1,2 @@
-;(function() {
-
-	console.log('header')
-
-}())
+let txt = 'header';
+console.log(txt);

@@ -7,4 +7,4 @@
 // выполняем их после того, как DOM построится 
 $(document).ready(function() {
 	//= require requare/developRequare.js
-})
+});

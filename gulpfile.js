@@ -6,6 +6,8 @@ var paths = require('path');
 // Подключение плагинов
 var gulp = require('gulp'),
     gulpsync = require('gulp-sync')(gulp),
+    babel = require('gulp-babel'),
+    gulpif = require('gulp-if'),
     clean = require('gulp-clean'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -362,7 +364,9 @@ gulp.task('scripts:dev', function () {
                 __dirname + '/src/static/scripts/'
             ]
         }))
-        //.pipe(concat('scripts.js'))
+        .pipe(gulpif('main.js', babel({
+            presets: ['env']
+        })))
         .pipe(removeEmptyLines({
             removeComments: true
         }))
@@ -380,7 +384,9 @@ gulp.task('scripts:build', function () {
                 __dirname + '/src/static/scripts/'
             ]
         }))
-        //.pipe(concat('scripts.js'))
+        .pipe(gulpif('main.js', babel({
+            presets: ['env']
+        })))
         .pipe(uglify())
         .pipe(gulp.dest(path.build.js));
 });
