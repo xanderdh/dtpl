@@ -310,7 +310,6 @@ gulp.task('clean:pic', function (cb) {
     return gulp.src(path.build.pic, {read: false}).pipe(clean());
 });
 gulp.task('img:pic', function () {
-    //gulp.start('clean:pic'); /rm clear task to remove watch bug
     gulp.src(path.src.pic)
     // .pipe(imagemin({
     //     progressive: true,
@@ -474,6 +473,7 @@ gulp.task('ajax:dev', function () {
 
 var sassTimer;
 var htmlTimer;
+var picTimer;
 gulp.task('watch', function () {
     watch(path.watch.html, function (event, cb) {
         gulp.start('html:dev');
@@ -505,16 +505,14 @@ gulp.task('watch', function () {
         gulp.start('sprite:retina');
     });
     watch([path.watch.pic], function (event, cb) {
-        gulp.start('img:pic');
-
-        //has some little bugs
-        // console.log('img');
-        // gulp.start(
-        //     gulpsync.sync([
-        //         'clean:pic',
-        //         'img:pic'
-        //     ])
-        // );
+        clearTimeout(picTimer);
+        picTimer = setTimeout(function () {
+            gulp.start(
+                gulpsync.sync([
+                    'clean:pic',
+                    'img:pic'
+                ]))
+        }, 500)
     });
     watch(path.watch.img, function (event, cb) {
         gulp.start('img:img');
