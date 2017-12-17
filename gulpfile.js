@@ -111,7 +111,7 @@ var spriteMithRetinaCfg = {
     retinaSrcFilter: ['src/static/assets/img/sprite/retina/**/*_2x.png'],
     retinaImgPath: '../img/sprite@2x.png',
     padding: 5
-}
+};
 
 var spriteSvgCfg = {
     "mode": {
@@ -130,7 +130,7 @@ var spriteSvgCfg = {
             }
         }
     }
-}
+};
 
 var svgSymbol = {
     mode: {
@@ -310,7 +310,7 @@ gulp.task('clean:pic', function (cb) {
     return gulp.src(path.build.pic, {read: false}).pipe(clean());
 });
 gulp.task('img:pic', function () {
-    gulp.start('clean:pic');
+    //gulp.start('clean:pic'); /rm clear task to remove watch bug
     gulp.src(path.src.pic)
     // .pipe(imagemin({
     //     progressive: true,
@@ -413,7 +413,7 @@ gulp.task('svgHtml', function () {
 gulp.task('svgSpriteCompl', gulpsync.sync([
     'sprite:svg',
     'svgHtml'
-]))
+]));
 
 //---------------------------------------//
 // Сборка html
@@ -506,6 +506,15 @@ gulp.task('watch', function () {
     });
     watch([path.watch.pic], function (event, cb) {
         gulp.start('img:pic');
+
+        //has some little bugs
+        // console.log('img');
+        // gulp.start(
+        //     gulpsync.sync([
+        //         'clean:pic',
+        //         'img:pic'
+        //     ])
+        // );
     });
     watch(path.watch.img, function (event, cb) {
         gulp.start('img:img');
@@ -587,7 +596,6 @@ gulp.task('develop', gulpsync.sync([
     'clean:css',
     'clean:pic',
     [
-
         'sass:dev',
         'img:pic',
         'img:img',
@@ -596,7 +604,6 @@ gulp.task('develop', gulpsync.sync([
         'sprite:retina',
         'sprite:default',
         'sprite:svg'
-
     ],
     'html:dev',
     'ajax:dev',
