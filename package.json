@@ -29,7 +29,6 @@
     "gulp-watch": "^4.3.9",
     "gulp.spritesmith": "^6.3.0",
     "imagemin-pngquant": "5.0.0",
-    "jquery-pixel-perfect": "^1.0.0",
     "path": "^0.12.7"
   },
   "dependencies": {
