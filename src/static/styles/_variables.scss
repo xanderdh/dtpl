@@ -3,8 +3,8 @@
 //   1. Global
 //   2. Colors
 //   3. Fonts
-//   4. Button
-//   5. Typography
+//   4. Typography
+//   5. Other
 
 //----------------------------------------------------//
 // 1. Global                                          //
@@ -18,8 +18,10 @@ $global-margin: 16px;
 //----------------------------------------------------//
 // 2. Colors                                          //
 //----------------------------------------------------//
-$default: #000;
-$main: #0c0;
+$default: #343434;
+$main: #000;
+$link-color: #191fcc;
+$spinner-default-color: #c0c;
 $black: #000;
 $white: #fff;
 $medium-gray: #ccc;
@@ -27,48 +29,17 @@ $medium-gray: #ccc;
 //----------------------------------------------------//
 // 3. Fonts                                           //
 //----------------------------------------------------//
-$mainFont: 'PT Sans';
-$mainFontSize: 18px;
-$mainFontHeight: 1;
-$mainFontWeight: 400;
-$mainFontColor: $default;
+$main-font: 'PT Sans';
+$main-font-size: 18px;
+$main-font-height: 1;
+$main-font-weight: 400;
+$main-font-color: $default;
 
-$fixFont: Verdana;
-$fixFontSize: 14px;
-$fixFontHeight: 24px;
-
+$fix-font: Verdana;
 $font: 'Arial';
 
 //----------------------------------------------------//
-// 4. Buttons                                         //
-//----------------------------------------------------//
-
-$button-padding: (
-        default: 10px 10px 10px 10px,
-        tiny: 4px 8px 4px 8px,
-        small: 5px 10px 5px 10px,
-        large: 10px 20px 10px 20px,
-);
-$button-font-size: (
-        default: 16px,
-        tiny: 12px,
-        small: 14px,
-        large: 20px,
-);
-$button-color: $black;
-$button-font-weight: 400;
-$button-margin: 0 0 0 0;
-$button-background: $main;
-$button-border: 2px solid $button-background;
-$button-radius: $global-radius;
-$button-rounded: $global-rounded;
-
-$button-color-hover: $main;
-$button-background-hover: $white;
-$button-border-hover: 2px solid $main;
-
-//----------------------------------------------------//
-// 5. Typography                                      //
+// 4. Typography                                      //
 //----------------------------------------------------//
 $h1-font-size: 32px;
 $h2-font-size: 30px;
@@ -76,3 +47,10 @@ $h3-font-size: 28px;
 $h4-font-size: 24px;
 $h5-font-size: 20px;
 $h6-font-size: 18px;
+
+$hr-color: #e9e9e9;
+$hr-margin: 32px 0;
+
+//----------------------------------------------------//
+// 5. Other                                           //
+//----------------------------------------------------//

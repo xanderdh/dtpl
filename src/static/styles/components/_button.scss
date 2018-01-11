@@ -1,44 +1,29 @@
 .btn {
+  @include trs;
   cursor: pointer;
   text-align: center;
   vertical-align: top;
-  font-weight: $button-font-weight;
-  font-size: map_get($button-font-size, default);
+  font-weight: 700;
+  font-size: $main-font;
   line-height: 1;
-  padding: map-get($button-padding, default);
+  padding: 10px 10px;
   text-transform: uppercase;
-  background: $button-background;
-  color: $button-color;
-  border: $button-border;
-  border-radius: $button-radius;
+  background: #b7c4ff;
+  color: $main-font-color;
+  border: 1px solid #000;
+  border-radius: $global-radius;
   position: relative;
-  transition: all .3s ease-in-out;
   width: 100%;
   display: block;
-  margin: $button-margin;
-
-  &--tiny {
-    font-size: map_get($button-font-size, tiny);
-    padding: map-get($button-padding, tiny);
-  }
-  &--small {
-    font-size: map_get($button-font-size, small);
-    padding: map-get($button-padding, small);
-  }
-  &--large {
-    font-size: map_get($button-font-size, large);
-    padding: map-get($button-padding, large);
-  }
 
   &:hover,
   &.active {
-    color: $button-color-hover;
-    background: $button-background-hover;
-    border: $button-border-hover;
+    color: #fff;
+    background: #43455c;
+    border-color: #43455c;
   }
   &:focus {
-    //position: relative;
-    //top: 1px;
+    //focus
   }
   &.disabled,
   &[disabled="disabled"],

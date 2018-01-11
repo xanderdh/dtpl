@@ -133,7 +133,7 @@
 }
 
 //----------------------------------------------------//
-// REM FONT_SIZE WITH FALLBACK 												//
+// REM FONT_SIZE WITH FALLBACK 						  //
 //----------------------------------------------------//
 // USAGE:
 // p {
@@ -200,4 +200,17 @@
 
 @mixin trs {
   transition: $global-transition;
+}
+
+%rlist {
+  font-size: 0;
+  word-spacing: -.36em;
+  line-height: 0;
+}
+
+%ulist {
+  font-size: $main-font-size;
+  line-height: $main-font-height;
+  word-spacing: normal;
+  display: inline-block;
 }

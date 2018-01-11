@@ -1,6 +1,5 @@
-;(function($) { 
-	//spinner example
-	$('.js-spinner').spinner();
-	
+;(function ($) {
+    //spinner example
+    $('.js-spinner').spinner();
+
 }($));
-	

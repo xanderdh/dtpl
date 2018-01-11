@@ -55,7 +55,7 @@ body.overflow-hidden {
  *      SHRINK_TIME = 400ms
  */
 
-$spinner-default-color: blue;
+
 
 .preloader-wrapper {
   //  display: inline-block;
@@ -414,7 +414,7 @@ $spinner-default-color: blue;
   height: 100%;
   overflow: hidden;
   border-color: inherit;
-
+  float: left;
   .circle {
     width: 200%;
     height: 100%;
