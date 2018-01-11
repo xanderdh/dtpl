@@ -30,9 +30,7 @@
     "gulp.spritesmith": "^6.3.0",
     "imagemin-pngquant": "5.0.0",
     "jquery-pixel-perfect": "^1.0.0",
-    "path": "^0.12.7"
-  },
-  "dependencies": {
+    "path": "^0.12.7",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "gulp-babel": "^7.0.0",
