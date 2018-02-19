@@ -654,7 +654,6 @@ if (fs.existsSync(keyFile)) {
         var globs = ['build/**/*.*'];
 
         return gulp.src(globs, {base: '', buffer: false})
-        //.pipe(conn.newer('/')) // only upload newer files (don't work on windows)
             .pipe(conn.dest('/'))
             .pipe(notify({
                 message: 'Finished deployment.',
